@@ -1,5 +1,6 @@
 from flask import render_template, url_for, request, redirect
 from model import db, Project, app
+from os.path import exists
 import data_to_db
 
 
@@ -38,13 +39,11 @@ def not_found(error):
   return render_template('404.html', msg=error), 404
 
 
-def add_products_to_db():
-  pass
-
-
 if __name__ == "__main__":
-  with app.app_context():
-    db.create_all()
-  data_to_db.populate_db()
+  db_exists = exists('./instance/projects.db')
+  if db_exists == False:
+    with app.app_context():
+      db.create_all()
+    data_to_db.populate_db()
     
   app.run(debug=True, port=8000, host='127.0.0.1')
