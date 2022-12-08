@@ -624,6 +624,15 @@ EXCEEDS - About Page
     list-style: none;
 }
 
+.four04 {
+    margin-block: 10rem;
+    text-align: center;
+}
+
+.four04 h1 {
+    color: var(--accent);
+}
+
 /*******
 Media Queries
 *******/
