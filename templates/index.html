@@ -1,64 +1,63 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <section class="header">
-        <h1>Python Developer</h1>
-        <p>I love to learn all things code related!</p>
-        <img src="../static/travis.jpeg" alt="Headshot of myself">
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a life long learner! So far I have taken 3 Techdegrees through Team Treehouse and am excited to start another. So far, my favorite aspect of coding is Front-End Web Development but learning to be a Full-Stack Developer is, of course, the end game.
-        </p>
-        <a href="{{ url_for('about') }}" class="about-btn">More About Me</a>
-
-        <div id="triangle1"></div>
-        <div id="triangle2"></div>
-    </section>
-    <section id="skills">
-        <i class="fas fa-laptop-code"></i>
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Flask</li>
-            <li>SQLAlchemy</li>
-            <li>JavaScript</li>
-            <li>React.js</li>
-            <li>Express</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <div id="triangle3"></div>
-        <i class="fas fa-file-code"></i>
-        <h2>Projects</h2>
-        <div id="project-list">
-            {% for project in projects %}
-                <div id="project{{project.id}}" class="a-project">
-                    <h3>{{project.title}}</h3>
-                    <a href="{{ url_for('project_detail', id=project.id) }}" class="github-btn">View Details</a>
-                    <a href="{{project.gh_link}}" class="github-btn" target="_blank">
-                        <i class="fab fa-github"></i>
-                        View on GitHub
-                    </a>
-                    <p>{{project.description}}</p>
-                    <p>
-                        Skills: {{project.skills}}. 
-                    </p>
-                </div>
-            {% endfor %}
+  <section class="header">
+    <h1>Python Developer</h1>
+    <p>I love to learn all things code related!</p>
+    <img src="../static/travis.jpeg" alt="Headshot of myself">
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a life long learner! So far I have taken 3 Techdegrees through Team Treehouse and am excited to start another. So far, my favorite aspect of coding is Front-End Web Development but learning to be a Full-Stack Developer is, of course, the end game.
+    </p>
+    <a href="{{ url_for('about') }}" class="about-btn">More About Me</a>
+    <div id="triangle1"></div>
+    <div id="triangle2"></div>
+  </section>
+  <section id="skills">
+    <i class="fas fa-laptop-code"></i>
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Flask</li>
+      <li>SQLAlchemy</li>
+      <li>JavaScript</li>
+      <li>React.js</li>
+      <li>Express</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <div id="triangle3"></div>
+    <i class="fas fa-file-code"></i>
+    <h2>Projects</h2>
+    <div id="project-list">
+      {% for project in projects %}
+        <div id="project{{project.id}}" class="a-project">
+          <h3>{{project.title}}</h3>
+          <a href="{{ url_for('project_detail', id=project.id) }}" class="github-btn">View Details</a>
+          <a href="{{project.gh_link}}" class="github-btn" target="_blank">
+            <i class="fab fa-github"></i>
+            View on GitHub
+          </a>
+          <p>{{project.description}}</p>
+          <p>
+            Skills: {{project.skills}}. 
+          </p>
         </div>
-        <div id="triangle4"></div>
-    </section>
-    <section id="contact">
-        <i class="fas fa-paper-plane"></i>
-        <h2>Contact Me</h2>
-        <p>
-            Just kidding... please don't
-        </p>
-        <p>
-            <i class="fas fa-envelope"></i>
-            my_email@email.com
-        </p>
-    </section>
+      {% endfor %}
+    </div>
+    <div id="triangle4"></div>
+  </section>
+  <section id="contact">
+    <i class="fas fa-paper-plane"></i>
+    <h2>Contact Me</h2>
+    <p>
+      Just kidding... please don't
+    </p>
+    <p>
+      <i class="fas fa-envelope"></i>
+      my_email@email.com
+    </p>
+  </section>
 {% endblock %}
     
