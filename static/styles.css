@@ -8,6 +8,7 @@ Colors
     --secondary: #fcbb6d;
     --accent: #d8737f;
     --white:  #fff;
+    --transition: .4s ease;
 }
 
 /*******
@@ -122,6 +123,10 @@ Header - Detail
     margin-bottom: 4rem;
 }
 
+.header .github-btn:hover {
+    border: 1px solid var(--primary);
+}
+
 .header .project-skills {
     list-style: none;
     text-align: left;
@@ -189,6 +194,21 @@ About
 #about p {
     text-align: left;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-btn {
+    border-radius: 10px;
+    background-color: var(--accent);
+    padding: 8px 15px;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.about-btn:hover {
+    background-color: var(--white);
+    color: var(--accent);
 }
 
 /*******
@@ -259,12 +279,22 @@ Projects
     margin-top: 3rem;
 }
 
+#project-list p {
+    text-align: center;
+}
+
 .github-btn {
     border-radius: 10px;
     background-color: var(--primary);
     padding: 8px 15px;
     color: var(--white);
     text-decoration: none;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.github-btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
 }
 
 .github-btn i {
@@ -315,6 +345,7 @@ Contact
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 #contact p  i {
@@ -336,6 +367,16 @@ Footer
 .footer a {
     color: var(--white);
     text-decoration: none;
+}
+
+.footer i,
+.footer a {
+    transition: color var(--transition);
+}
+
+.footer i:hover,
+.footer a:hover {
+    color: var(--accent)
 }
 
 .footer .socials  {
@@ -382,7 +423,7 @@ Description - Detail
 }
 
 #project-desc p {
-    text-align: left;
+    text-align: center;
     padding-bottom: 4rem;
 }
 
@@ -413,7 +454,15 @@ Buttons - Detail
     color: var(--white);
     padding: 13px 35px;
     text-decoration: none;
+    transition: background-color var(--transition), color var(--transition), border var(--transition);
 }
+
+#edit-delete a:hover {
+    background-color: var(--white);
+    color: var(--accent);
+    border: 1px solid var(--primary);
+}
+
 
 #edit-delete a:first-of-type  {
     margin-right: 20px;
@@ -460,6 +509,16 @@ Form
     height: 200px;
 }
 
+#form input,
+#form textarea {
+    transition: background-color var(--transition);
+}
+
+#form input:focus,
+#form textarea:focus {
+    background-color: var(--secondary);
+}
+
 #form label {
     font-size: 20px;
     font-weight: bold;
@@ -490,10 +549,20 @@ Form
 #form button[type='reset'] {
     margin-right: 10px;
     background-color: var(--white);
+    transition: background-color var(--transition);
+}
+
+#form button[type='reset']:hover {
+    background-color: var(--secondary)
 }
 
 #form button[type='submit'] {
     background-color: var(--secondary);
+    transition: background-color var(--transition);
+}
+
+#form button[type='submit']:hover {
+    background-color: var(--white)
 }
 
 /********************
@@ -549,6 +618,10 @@ EXCEEDS - About Page
     color: var(--white);
     font-size: 20px;
     padding-right: 10px;
+}
+
+#about-page li {
+    list-style: none;
 }
 
 /*******

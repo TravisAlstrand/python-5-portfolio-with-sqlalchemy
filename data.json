@@ -1,28 +1,28 @@
 {
   "project1": {
     "title": "The Number Guessing Game",
-    "date": "10/06/2022",
+    "date": "2022-10-06",
     "description": "A console based number guessing game that prompts a player to choose a number between a specified range of numbers.",
     "skills": ["Console I/O", "Random Numbers", "While Loops", "Strings and Operators", "Exception Handling"],
     "gh_link": "https://github.com/TravisAlstrand/Python-1-Number-Guessing-Game"
   },
   "project2": {
     "title": "Basketball Stats Tool",
-    "date": "10/19/2022",
+    "date": "2022-10-19",
     "description": "A console based basketball team statistics tool to help divide up a group of players into equal teams.",
-    "skills": ["Accessing, appending and counting lists", "Accessing dictionaries", "Leveraging built-in methods", "Cleaning data", "Creating control flow using for loops and conditional statements", "Use of comparison operators", "Creating a menu system"],
+    "skills": ["Accessing, Appending and counting lists", "Accessing dictionaries", "Leveraging built-in methods", "Cleaning data", "Creating control flow using for loops and conditional statements", "Use of comparison operators", "Creating a menu system"],
     "gh_link": "https://github.com/TravisAlstrand/Python-2-Basketball-Stats-Tool"
   },
   "project3": {
     "title": "Phrase Hunters",
-    "date": "11/20/2022",
+    "date": "2022-11-20",
     "description": "A console based word guessing game which hides a random phrase from player and they try to guess within a certain amount of guesses.",
     "skills": ["OOP", "Console I/O", "List iteration", "Adding methods and attributes to a class", "Instantiation and initialization"],
     "gh_link": "https://github.com/TravisAlstrand/python-3-phrase-hunter"
   },
   "project4": {
     "title": "Store Inventory with SQLAlchemy",
-    "date": "12/05/2022",
+    "date": "2022-12-05",
     "description": "A console application that loads an existing store's inventory from a CSV file into a SQLite database. CRUD operations implemented.",
     "skills": ["Installing dependencies", "CSV reading/writing", "Cleaning data", "Using a database ORM"],
     "gh_link": "https://github.com/TravisAlstrand/python-4-store-inventory"

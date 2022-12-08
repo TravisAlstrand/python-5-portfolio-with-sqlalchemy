@@ -4,12 +4,13 @@ import json
 
 
 def clean_date(date_str):
-  split_date = date_str.split('/')
-  month = int(split_date[0])
-  day = int(split_date[1])
-  year = int(split_date[2])
+  split_date = date_str.split('-')
+  month = int(split_date[1])
+  day = int(split_date[2])
+  year = int(split_date[0])
   date_obj = datetime.date(year, month, day)
   return date_obj
+
 
 def clean_skills(skill_list):
   skill_str = ', '.join(skill_list)
