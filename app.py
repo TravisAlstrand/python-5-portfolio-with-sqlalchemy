@@ -45,7 +45,7 @@ def edit_project(pid):
         project.skills = request.form['skills']
         project.gh_link = request.form['github']
         db.session.commit()
-        return redirect(url_for('project_detail', id=pid))
+        return redirect(url_for('project_detail', pid=pid))
     project.date = project.date.strftime('%Y-%m-%d')
     return render_template('editform.html', project=project, projects=projects)
 
